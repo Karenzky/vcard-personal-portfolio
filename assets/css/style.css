@@ -723,12 +723,12 @@ main {
 
 
 /**
- * #clients 
+ * #companies 
  */
 
-.clients { margin-bottom: 15px; }
+.companies { margin-bottom: 15px; }
 
-.clients-list {
+.companies-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -743,18 +743,17 @@ main {
   scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.companies-item {
   min-width: 50%;
   scroll-snap-align: start;
 }
 
-.clients-item img {
-  width: 100%;
+.companies-item img {
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.companies-item img:hover { filter: grayscale(0); }
 
 
 
@@ -1115,6 +1114,50 @@ main {
 }
 
 
+/*-----------------------------------*\
+  #BLOG MODAL
+\*-----------------------------------*/
+
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pdf-viewer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 100%;
+}
+
 
 
 
@@ -1239,7 +1282,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .companies-item { min-width: calc(33.33% - 10px); }
 
 
 
@@ -1471,16 +1514,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
+  /* companies */
 
-  .clients-list {
+  .companies-list {
     gap: 50px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .companies-item { min-width: calc(33.33% - 35px); }
 
 
 
@@ -1734,9 +1777,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
+  /* companies */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .companies-item { min-width: calc(25% - 38px); }
 
 
 
